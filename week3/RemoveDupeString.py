@@ -7,3 +7,7 @@ def removeDuplicates(string):
 			stack.append(char)
 			
 	return ''.join(stack)
+    
+#Testing Code
+print(removeDuplicates('abbaca'))
+print(removeDuplicates('azxxzy'))
