@@ -71,7 +71,8 @@ if __name__ == '__main__':
     btree = build_tree(arr, BTreeNode)
     PrintTree(btree)
 
-
+    """
     arr = [5,4,3,2,'x','x','x',8,'x','x',6,1,'x','x','x']
     btree = build_tree(arr, BTreeNode)
     PrintTree(btree)
+    """

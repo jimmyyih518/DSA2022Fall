@@ -15,14 +15,16 @@ def fibonacci(n):
     stack = [n]
     while len(stack) > 0:
         curr = stack.pop()
-        if curr in [0,1]:
+        if curr == 0 or curr == 1: #base case
             total += 1
         else:
-            stack.append(curr - 1)
             stack.append(curr - 2)
+            stack.append(curr - 1)
 
     return total
+
     
 #Testing Code
 for i in range(10):
+    print('n= ', i, 'fibonacci = ', end= ' ')
     print(fibonacci(i))

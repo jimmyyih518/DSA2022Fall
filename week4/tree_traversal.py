@@ -83,7 +83,7 @@ def postOrderTraversal(root):
     while s1:
         node = s1.pop()
         s2.append(node)
-        
+        #append left child first
         if node.left:
             s1.append(node.left)
         if node.right:
