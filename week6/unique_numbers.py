@@ -2,7 +2,7 @@
 #Divide and Conquer implementation
 
 def unique_in_arr(nums):
-    #define base cases, aka edge cases
+    #define base cases, aka edge cases that we know to start
     if len(nums) <= 1:
         return nums
     elif len(nums) == 2:

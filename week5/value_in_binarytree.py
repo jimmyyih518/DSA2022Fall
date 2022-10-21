@@ -1,7 +1,7 @@
 from binary_tree import *
 
 
-"""
+
 #level order traversal binary tree
 def levelOrderTraversal(root):
     from collections import deque
@@ -27,7 +27,7 @@ def levelOrderTraversal(root):
         
     return result
                     
-"""
+
 
 #Binary Tree Example    
 arr = [5,4,3,'x','x',8,'x','x',6,'x','x']

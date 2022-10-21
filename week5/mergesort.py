@@ -14,7 +14,7 @@ def mergeSort(L):
 def merge(A, B):
     out = []
     i, j = 0, 0
-    while i < len(A) and j < len(B):
+    while i < len(A) and j < len(B): #walk through lists A and B, and append to output
         if A[i] < B[j]:
             out.append(A[i])
             i += 1
@@ -22,7 +22,8 @@ def merge(A, B):
         else:
             out.append(B[j])
             j += 1
-            
+    
+    # Append remaining leftover elements from either list
     while i < len(A):
         out.append(A[i])
         i += 1
@@ -32,7 +33,9 @@ def merge(A, B):
         j += 1
     
     return out
-    
 
-arr = [8,4,7,5,1,3]
+#Testing Code
+arr = [1,2,1]
 print(mergeSort(arr))
+
+
