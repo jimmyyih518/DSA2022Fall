@@ -15,7 +15,7 @@ Explanation: ab is the longest substring, length 2
 """
 
 
-def longest_substring_without_repeating_characters(s: str) -> int:
+def longest_substring(s):
     window = set()
     
     slow = 0
@@ -31,3 +31,7 @@ def longest_substring_without_repeating_characters(s: str) -> int:
             slow += 1
     
     return longest
+
+#Testing Code
+s = 'aaaabaaa'
+print(longest_substring(s))

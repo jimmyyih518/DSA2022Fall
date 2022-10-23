@@ -24,3 +24,9 @@ def two_sum_sorted(arr, target):
             right -= 1
     
     return
+
+#Testing Code
+
+arr = [2,3,4,5,8,11,18]
+target = 8
+print(two_sum_sorted(arr, target))

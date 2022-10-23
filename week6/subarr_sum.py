@@ -9,20 +9,21 @@ Output: 1 4
 Explanation: -20 - 3 + 30 = 7. The indices for subarray [-20,-3,30] is 1 and 4 (right exclusive).
 """
 
-def subarray_sum(arr: List[int], target: int) -> List[int]:
-    # WRITE YOUR BRILLIANT CODE HERE
-    left = 0
-    right = 1
-    curr_sum = arr[0]
-    while right <= len(arr):
-        if curr_sum + arr[right] == target:
-            return [left, right]
-        elif curr_sum + arr[right] < target:
-            right += 1
+def subarray_sum(arr, target):
+
+    # prefix_sum 0 happens when we have an empty array
+    prefix_sums = {0: 0}
+    cur_sum = 0
+    for i in range(len(arr)):
+        cur_sum += arr[i]
+        complement = cur_sum - target
+        if complement in prefix_sums:
+            return [prefix_sums[complement], i + 1]
+        prefix_sums[cur_sum] = i + 1
         
     return []
     
-    
+#Testing Code    
 arr = [1, -20, -3, 30, 5, 4]
 target = 7
 print(subarray_sum(arr, target))

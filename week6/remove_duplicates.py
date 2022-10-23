@@ -10,6 +10,7 @@ Output: 3.
 Your function should modify the list in place so the 
 first 3 elements becomes 0, 1, 2. Return 3 because the new length is 3.
 """
+
 def remove_duplicates(arr):
 
     slow = 0
@@ -22,3 +23,7 @@ def remove_duplicates(arr):
 
     
     return slow + 1
+    
+#Testing Code
+arr = [1,1,1,2,2,3,3,3]
+print(remove_duplicates(arr))
