@@ -1,7 +1,6 @@
 from collections import deque
-from typing import List
 
-def flood_fill(r: int, c: int, replacement: int, image: List[List[int]]) -> List[List[int]]:
+def flood_fill(r, c, replacement, image):
     num_rows, num_cols = len(image), len(image[0])
     def get_neighbors(coord, color):
         row, col = coord
@@ -38,5 +37,11 @@ def flood_fill(r: int, c: int, replacement: int, image: List[List[int]]) -> List
 r = 2
 c = 2
 replacement = 9
-arr = [[0,1,3,4,1],[3,8,8,3,3],[6,7,8,8,3],[12,2,8,9,1],[12,3,1,3,2]]
-print(flood_fill(r, c, replacement, arr))
+arr = [[0,1,3,4,1],
+        [3,8,8,3,3],
+        [6,7,8,8,3],
+        [12,2,8,9,1],
+        [12,3,1,3,2]]
+res = flood_fill(r, c, replacement, arr)
+for row in res:
+    print(row, end='\n')

@@ -15,7 +15,6 @@ Output: 2
 '''
 
 from collections import deque
-from typing import List
 
 def shortest_path(graph, a, b):
     def get_neighbors(node):
