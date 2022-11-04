@@ -23,7 +23,7 @@ def shortest_path(graph, a, b):
     # BFS template
     def bfs(root, target):
         queue = deque([root])
-        visited = set([root])
+        visited = set([root]) # O(1) lookup
         level = 0
         while len(queue) > 0:
             n = len(queue)
@@ -41,11 +41,11 @@ def shortest_path(graph, a, b):
     return bfs(a, b)
 
 #Testing Code
-graph: {
+graph= {
   0: [1, 2],
   1: [0, 2, 3],
   2: [0, 1],
   3: [1]
 }
 
-print(shortest_path(0, 3))
+print(shortest_path(graph,0, 3))
