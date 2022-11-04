@@ -24,35 +24,6 @@ def flood_fill(r, c, replacement, image):
     return image
     
     
-from collections import deque
-
-def flood_fill(r, c, replacement, image):
-    num_rows, num_cols = len(image), len(image[0])
-    def get_neighbors(coord, color):
-        row, col = coord
-        delta_row = [-1, 0, 1, 0]
-        delta_col = [0, 1, 0, -1]
-        for i in range(len(delta_row)):
-            neighbor_row = row + delta_row[i]
-            neighbor_col = col + delta_col[i]
-            if 0 <= neighbor_row < num_rows and 0 <= neighbor_col < num_cols:
-                if image[neighbor_row][neighbor_col] == color:
-                    yield neighbor_row, neighbor_col
-
-    def dfs(root, visited=set()):
-        row, col = root
-        color = image[row][col]
-        image[row][col] = replacement
-        visited.add((row, col))
-        for n_row, n_col in get_neighbors(root, color):
-            if (n_row, n_col) in visited:
-                continue
-            dfs((n_row, n_col), visited)        
-
-
-    dfs((r, c))
-    return image
-    
 #Testing Code
 r = 2
 c = 2
